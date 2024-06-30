@@ -1,30 +1,18 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-/// <summary>
-/// ���� ��� �� �� �����!
-/// </summary>
 public class CheckingConnection : MonoBehaviour
 {
-    // ����� ���������
-    //CollectionRooms CollectionRoom;
-    // SpawnPoint � IndexTypeCrossroad
     [SerializeField] GameObject SpawnPoint;
     [SerializeField] int IndexTypeCrossroad;
-    //void Start()
-    //{
-    //    // ���� ���������
-    //    CollectionRoom = GameObject.FindGameObjectWithTag("SpawnPoint").GetComponent<CollectionRooms>();
-    //}
+  
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         //CheckConnect(collision);
     }
+
     void CheckConnect(Collider2D collision)
     {
-        // �������� �� ������������� ��������� � ����������
         switch (SpawnPoint.name)
         {
             case "SP Top":
