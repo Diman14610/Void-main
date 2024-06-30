@@ -18,27 +18,28 @@ public class CrossroadGeneration : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-
-        IsSpawned = true;
-        /*
         // Объект коллизии, c которым столкнулся уже с созданным объектом/коллизией
         var collObjectName = collision.gameObject.name;
         bool IsSpawnedCrossroad = false;
 
-        Debug.Log($"void OnTriggerEnter2D colObjectName = {collObjectName} & gameObjectName = {gameObject.name}");
-
         // Перебираем типы возможных перекрёстков
         foreach (var typeCrossroad in CollectionRoom.AllTypeCrossroads)
         {
-            if (collObjectName == typeCrossroad.gameObject.name)
+            string triggerObjectName = typeCrossroad.gameObject.name + "(Clone)";
+            if (collObjectName == triggerObjectName)
+            {
                 IsSpawnedCrossroad = true;
+                break;
+            }
         }
 
         // Не спавним, если есть перекрёсток, а если нет, то спавним перекрёсток
         if (IsSpawnedCrossroad)
             IsSpawned = true;
         else
-            IsSpawned = false;*/
+            IsSpawned = false;
+
+        Debug.Log($"colObjectName = {collObjectName}, gameObjectName = {gameObject.name}, IsSpawned = {IsSpawned}");
     }
     // ������� �����
     //private int IndexSP = 0;

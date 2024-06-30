@@ -25,7 +25,7 @@ public class CollectionRooms : MonoBehaviour
 	// Тупик
 	public GameObject DeadEnd;
 
-	public readonly int MaxCountRoom = 400;
+	public readonly int MaxCountRoom = 80;
 
 	// Задержка спавна
 	public float DeltaTime = 0f;
